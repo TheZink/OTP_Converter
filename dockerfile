@@ -11,5 +11,5 @@ COPY demo/src ./src
 
 RUN mvn package
 
-CMD [ "java", "-jar", "target/converter.jar" ]
+CMD [ "java", "-jar", "target/Temperatureconverter.jar" ]
 
