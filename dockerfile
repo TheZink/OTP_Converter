@@ -1,9 +1,15 @@
+
+
 FROM maven:latest
 LABEL authors="ilkkasin"
 
+# Set working directory
 WORKDIR /app
-COPY pom.xml /app
-COPY . /app
+
+COPY demo/pom.xml ./
+COPY demo/src ./src
+
 RUN mvn package
-CMD [ "java", "-jar", "demo/target/converter.jar" ]
+
+CMD [ "java", "-jar", "target/converter.jar" ]
 
